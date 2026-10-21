@@ -1,3 +1,0 @@
-case,file,replicates
-paper_clipped_normal,reference/benchmark_inputs/paper_clipped_normal.csv,2000
-categorical_16,reference/benchmark_inputs/categorical_16.csv,256
