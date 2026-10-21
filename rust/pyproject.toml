@@ -5,6 +5,8 @@ build-backend = "maturin"
 [project]
 name = "fast-dp-boot-native"
 version = "0.1.0"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
 description = "Optional Rust sampling backend for fast-dp-boot"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]

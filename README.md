@@ -230,3 +230,9 @@ coverage and throughput sweeps, certified accountant arithmetic, and further
 Rust optimization beyond the optional mean-sampling backend. Source boundaries:
 `bootstrap.py`, `privacy.py`, `accounting.py`, `deconvolution.py`; the earlier
 experimental FFT model and Algorithm 2 remain in `inference.py`.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) and
+[ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for attribution. Third-party dependencies
+retain their respective licenses.

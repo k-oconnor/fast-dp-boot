@@ -1,0 +1,21 @@
+Fast DP Boot
+Copyright 2026 Kevin O'Connor and contributors
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This project implements methods described in Differentially Private Bootstrap:
+New Privacy Analysis and Inference Strategies, by Zhanyu Wang, Guang Cheng,
+and Jordan Awan (https://arxiv.org/abs/2210.06140).
+
+Reference comparisons use the authors' Apache-2.0-licensed implementation at
+https://github.com/Zhanyu-Wang/Differentially_Private_Bootstrap, pinned to
+commit fd001561ed338d47143c94b995f4d47478ab9eb0. That checkout is obtained
+separately and is not included in this distribution.
+
+Reference comparisons also use the separately installed deconvolveR package
+by Bradley Efron and Balasubramanian Narasimhan, licensed GPL-2.0-or-later.
+That package is not included in this distribution. Core inference is an
+independent NumPy/SciPy implementation. See ACKNOWLEDGMENTS.md in the project
+repository for additional attribution and fixture provenance.
+
+Third-party dependencies retain their respective licenses.
