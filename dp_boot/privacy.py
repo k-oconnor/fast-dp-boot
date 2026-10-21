@@ -39,9 +39,20 @@ class Calibration:
     sensitivity: float = 0.
     replicates: int = 0
     n: int | None = None
+    epsilon: float | None = None
+    profile_delta: float | None = None
 
     def delta(self, epsilon):
-        """For asymptotic calibration this is an approximation, not a finite bound."""
+        """For asymptotic calibration this is an approximation, not a finite bound.
+
+        For profile calibration it is the accountant's upper bound, which was
+        evaluated only at the calibrated epsilon.
+        """
+        if self.method == "profile_upper_bound":
+            if epsilon != self.epsilon:
+                raise ValueError("a profile calibration bounds delta only at its calibrated "
+                                 "epsilon; evaluate others with bootstrap_privacy_profile")
+            return self.profile_delta
         return min(1., gaussian_delta(epsilon, self.mu) + self.tail_delta)
 
 

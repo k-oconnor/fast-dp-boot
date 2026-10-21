@@ -129,3 +129,63 @@ def bootstrap_privacy_profile(n, base_mu, replicates, epsilons, *,
     lower = _hockey_stick(composed, offset, loss_step, eps+replicates*loss_step)
     return PrivacyProfile(eps, upper, loss_step,
                           replicates*loss_step, tail_bound, fft_points, error, lower)
+
+
+def profile_calibration(n, sensitivity, replicates, epsilon, delta, *, loss_step=None,
+                        max_loss=6., rtol=1e-3, max_fft_points=8_000_000):
+    """Smallest sigma, to relative tolerance rtol, whose Proposition 14 upper
+    profile gives delta(epsilon) <= delta.
+
+    Same contract as bootstrap_privacy_profile: fixed public n, replace-one
+    adjacency, valid global L2 sensitivity, ideal Gaussian noise. Bisection keeps
+    the invariant that the returned sigma's upper profile meets delta, so the
+    result is never looser than the accountant's bound; floating-point error is
+    not certified. The default loss_step keeps the rounding slack B*loss_step at
+    a tenth of epsilon, coarsened only as far as max_fft_points requires; finer
+    steps (with a larger max_fft_points) give a tighter sigma.
+    """
+    from .privacy import Calibration, gaussian_delta
+    from scipy.optimize import brentq
+    integer(n, "n")
+    integer(replicates, "replicates", 2)
+    positive(sensitivity, "sensitivity")
+    positive(epsilon, "epsilon")
+    positive(rtol, "rtol")
+    if not np.isfinite(delta) or not 0 < delta < 1:
+        raise ValueError("delta must lie in (0,1)")
+    if loss_step is None:
+        fits = 2.02 * max_loss * replicates / max_fft_points
+        loss_step = min(.01, max(epsilon / (10 * replicates), fits))
+
+    def upper(sigma):
+        profile = bootstrap_privacy_profile(n, sensitivity / sigma, replicates, [epsilon],
+                                            loss_step=loss_step, max_loss=max_loss,
+                                            max_fft_points=max_fft_points)
+        return float(profile.delta[0])
+
+    # Bracket from the paper's asymptotic rule at the GDP level matching (epsilon, delta).
+    top = 1.
+    while gaussian_delta(epsilon, top) < delta:
+        top *= 2
+    mu = brentq(lambda m: gaussian_delta(epsilon, m) - delta, 1e-12, top)
+    hi = np.sqrt((2 - 2 / np.e) * replicates) * sensitivity / mu
+    for _ in range(60):
+        if upper(hi) <= delta:
+            break
+        hi *= 2
+    else:
+        raise ValueError("no sigma meets delta; widen max_loss or refine loss_step")
+    lo = hi / 2
+    for _ in range(60):
+        if upper(lo) > delta:
+            break
+        hi, lo = lo, lo / 2
+    while hi / lo - 1 > rtol:
+        mid = np.sqrt(lo * hi)
+        if upper(mid) <= delta:
+            hi = mid
+        else:
+            lo = mid
+    return Calibration(float(hi), "profile_upper_bound", float("nan"), sensitivity=sensitivity,
+                       replicates=replicates, n=n, epsilon=float(epsilon),
+                       profile_delta=upper(hi))

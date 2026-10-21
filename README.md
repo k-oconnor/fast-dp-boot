@@ -44,13 +44,13 @@ python -m pytest -q
 ```python
 import numpy as np
 from dp_boot import (
-    bootstrap_mean, finite_calibration, asymptotic_interval, deconvolve,
+    bootstrap_mean, profile_calibration, asymptotic_interval, deconvolve,
 )
 
 # Synthetic input; n and clipping bounds are public and fixed.
 x = np.random.default_rng(42).binomial(1, .4, 10_000)
 b = 256
-calibration = finite_calibration(
+calibration = profile_calibration(
     len(x), sensitivity=1/len(x), replicates=b, epsilon=1., delta=1e-6,
 )
 release = bootstrap_mean(
@@ -146,8 +146,16 @@ to B and, for the finite bound, n. Additional releases consume additional
 privacy budget. Statistics, bounds and sampling parameters must not be chosen
 from confidential data without appropriate separate accounting.
 
-`finite_calibration` gives a conservative finite (epsilon,delta) alternative
-to the paper's numerical accountant. For the changed row K~Binomial(n,1/n),
+`profile_calibration` is the recommended finite calibration. It returns the
+smallest sigma, to a relative tolerance, whose Proposition 14 upper profile
+(below) gives delta(epsilon) <= delta, and records that bound at the calibrated
+epsilon only. At n=100,000, epsilon=1, delta=1e-6 it needs about 5% more noise
+than the paper's asymptotic rule with a fine loss step; the default step, limited
+by `max_fft_points`, adds about 2% at B=100 and 8.5% at B=400. Floating-point
+error in the accountant is not certified.
+
+`finite_calibration` gives a simpler, more conservative finite (epsilon,delta)
+alternative, about 9.5 times the noise in the same setting. For the changed row K~Binomial(n,1/n),
 choose k with B*Pr(K>k) <= delta/2. Condition on all B multiplicities <= k:
 each paired statistic differs by at most k*Delta, and independent Gaussian
 composition is k*Delta*sqrt(B)/sigma-GDP. This event depends only on sampling

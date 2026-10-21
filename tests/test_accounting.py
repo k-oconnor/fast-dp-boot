@@ -67,3 +67,24 @@ def test_independent_two_release_integral_is_inside_rounding_bracket(n,mu,expect
     p=bootstrap_privacy_profile(n,mu,2,[0.,.5,1.,2.,4.,6.],loss_step=.0005,max_loss=20.)
     assert np.all(p.delta_lower <= np.asarray(expected)+1e-10)
     assert np.all(np.asarray(expected) <= p.delta+1e-10)
+
+
+def test_profile_calibration_meets_delta_tightly_and_beats_the_finite_bound():
+    from dp_boot import bootstrap_mean, finite_calibration, profile_calibration
+    n, b, step = 1000, 50, .002
+    c = profile_calibration(n, 1/n, b, 1., 1e-6, loss_step=step, rtol=1e-3)
+    upper = lambda s: bootstrap_privacy_profile(n, (1/n)/s, b, [1.], loss_step=step, max_loss=6.).delta[0]
+    assert upper(c.sigma) <= 1e-6
+    assert upper(c.sigma / 1.002) > 1e-6          # tight to the tolerance
+    assert c.delta(1.) == pytest.approx(upper(c.sigma))
+    assert c.sigma < finite_calibration(n, 1/n, b, epsilon=1., delta=1e-6).sigma
+    release = bootstrap_mean(np.zeros(n), bounds=(0, 1), replicates=b, calibration=c,
+                             rng=np.random.default_rng(0))
+    assert release.estimates.shape == (b,)
+
+
+def test_profile_calibration_reports_delta_only_at_its_epsilon():
+    from dp_boot import profile_calibration
+    c = profile_calibration(200, 1/200, 10, 1., 1e-5)
+    with pytest.raises(ValueError, match="calibrated epsilon"):
+        c.delta(.5)
