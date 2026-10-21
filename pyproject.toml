@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-dp-boot"
+version = "0.2.0"
+description = "Scalable Gaussian differentially private bootstrap research implementation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "psutil>=5"]
+
+[project.urls]
+"Research paper" = "https://arxiv.org/abs/2210.06140"
+"Reference implementation" = "https://github.com/Zhanyu-Wang/Differentially_Private_Bootstrap"
+
+[tool.setuptools.packages.find]
+include = ["dp_boot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
