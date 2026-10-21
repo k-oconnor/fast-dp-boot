@@ -1,5 +1,7 @@
 # Fast DP Boot
 
+![Fast DP Boot: a winged, rocket-powered boot](pic/the_boot.jpg)
+
 `fast-dp-boot` is a scalable differentially private bootstrap library. The Python
 import is `dp_boot`.
 
