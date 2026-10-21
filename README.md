@@ -236,3 +236,14 @@ experimental FFT model and Algorithm 2 remain in `inference.py`.
 Licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) and
 [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for attribution. Third-party dependencies
 retain their respective licenses.
+
+## No warranty or guarantee
+
+This research software is provided **"AS IS", without warranties or guarantees
+of any kind**, express or implied, to the extent permitted by applicable law.
+We do not guarantee correctness, privacy protection, statistical coverage,
+performance, security, or suitability for any particular purpose. Tests and
+benchmark results describe specific evaluated conditions and do not establish
+such guarantees. You are responsible for validating the software and its
+assumptions for your use. See Sections 7 and 8 of the [license](LICENSE) for the
+full warranty disclaimer and limitation of liability.
