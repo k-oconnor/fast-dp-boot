@@ -5,16 +5,29 @@
 `fast-dp-boot` is a scalable differentially private bootstrap library. The Python
 import is `dp_boot`.
 
-Python implementation of Wang, Cheng, and Awan's
-[Differentially Private Bootstrap](https://arxiv.org/abs/2210.06140), validated
+An implementation of Wang, Cheng, and Awan's
+[Differentially Private Bootstrap](https://arxiv.org/abs/2210.06140) in Python,
+with optional Rust sampling kernels. Validated
 against [the authors' source](https://github.com/Zhanyu-Wang/Differentially_Private_Bootstrap)
 at commit `fd001561ed338d47143c94b995f4d47478ab9eb0`.
 
-The matched single-worker pipeline runs **25.8x faster** locally on the clipped-
-normal workload at n=10,000 and B=2,000: 1.730 s in R versus .0671 s in Python,
-median across 20 shared datasets. This includes bootstrap sampling, Gaussian
-noise, deconvolution, uncertainty statistics and full covariance output.
-It excludes process startup, file I/O, plotting and experiment orchestration.
+The matched single-worker pipeline runs **28.0x faster than the authors' R
+implementation** locally on the clipped-normal workload at n=10,000 and B=2,000.
+An interleaved comparison across 20 shared datasets measured:
+
+| Implementation | Median full pipeline | Speedup over R |
+| --- | ---: | ---: |
+| Authors' R implementation | 1.720 s | 1.0x |
+| Python with NumPy sampling | 61.74 ms | 27.9x |
+| Python with Rust sampling | 61.46 ms | 28.0x |
+
+Both Python backends are effectively tied on this workload. NumPy remains the
+default; Rust implements sampling only, while calibration, Gaussian noise and
+inference remain in Python. Timings include bootstrap sampling, Gaussian noise,
+deconvolution, uncertainty statistics and eager full covariance output. They
+exclude process startup, file I/O, plotting and experiment orchestration.
+See the [three-way comparison](benchmarks/RUST_RESULTS.md) for settings,
+validation, limitations and [raw results](benchmarks/matched_rust_pipeline.json).
 
 On 100 identical private releases, the deconvolved CI endpoints match R within
 5.6e-16. A separate 1,000-trial simulation achieved 89.5% coverage for nominal
@@ -85,9 +98,44 @@ input, clipping/unique preprocessing, output, small reduction arrays and library
 workspaces. Total memory is O(n+B+budget), not strictly the budget. Set
 `method="draws"` to skip unique preprocessing for a known continuous workload.
 
-The earlier 600x result was a specialized 16-value synthetic comparison against
-a NumPy loop. It is not the headline reference comparison. The matched normal
-workload has thousands of distinct values and uses direct tiled draws.
+### Optional Rust sampling backend
+
+With a Rust toolchain and a native linker installed, build the separate extension:
+
+```powershell
+python -m pip install ./rust
+python -m pytest -q
+```
+
+Pass `backend="rust"` to `bootstrap_mean` or `bootstrap_mean_from_counts`:
+
+```python
+release = bootstrap_mean(
+    x, bounds=(0, 1), replicates=b, calibration=calibration, backend="rust",
+)
+```
+
+The default remains `backend="numpy"`; installing the core package never needs
+Rust. The native backend supplies direct row draws and exact multinomial count
+sampling via conditional binomials. Python still validates calibration, clips
+inputs, adds Gaussian noise, and performs inference/accounting. The generic
+`bootstrap_statistic` callback remains a Python implementation.
+
+Rust uses a ChaCha20 stream seeded from 32 bytes of the supplied NumPy generator.
+Seeds reproduce within a backend/build, not across backends or dependency
+versions. Explicit seeds remain for experiments only. Native bindings copy input
+arrays before releasing the GIL; these O(n) or O(K) copies, output, and unique
+preprocessing are outside the sampling scratch budget. Direct draws use constant
+sampling scratch space; count sampling uses O(K). Rust frequency-table totals
+are limited to 2**53 so integer counts remain representable in binary64.
+
+A local 20-repeat comparison found faster continuous-data sampling but slower
+small-support count sampling. A separate, interleaved comparison on the original
+R workload found both Python backends effectively tied under the same 8 MiB
+sampling budget, as shown above. See
+[Rust results and scope](benchmarks/RUST_RESULTS.md) for timings and reproduction.
+The standalone Rust crate exposes noiseless
+sampling kernels; they must stay inside the confidential computation boundary.
 
 ## Privacy calibration and accounting
 
@@ -160,6 +208,7 @@ Vector confidence intervals are marginal, not simultaneous confidence regions.
 python -m benchmarks.coverage --trials 1000
 python -m benchmarks.matched_pipeline
 python -m benchmarks.deconvolution_scaling
+python -m benchmarks.matched_rust_pipeline --trials 20
 python -m benchmarks.accounting_reference
 python -m benchmarks.accounting_quadrature
 ```
@@ -177,7 +226,7 @@ at that size or better statistical performance from increasing the grid.
 
 This implements the Gaussian core, not all paper experiments. Remaining work
 includes sensitivity-aware logistic/quantile regression adapters, broader
-coverage and throughput sweeps, certified accountant arithmetic, and eventually
-Rust kernels behind the existing sampling boundary. Source boundaries:
+coverage and throughput sweeps, certified accountant arithmetic, and further
+Rust optimization beyond the optional mean-sampling backend. Source boundaries:
 `bootstrap.py`, `privacy.py`, `accounting.py`, `deconvolution.py`; the earlier
 experimental FFT model and Algorithm 2 remain in `inference.py`.

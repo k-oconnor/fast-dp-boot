@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin>=1.10,<2"]
+build-backend = "maturin"
+
+[project]
+name = "fast-dp-boot-native"
+version = "0.1.0"
+description = "Optional Rust sampling backend for fast-dp-boot"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[tool.maturin]
+features = ["python"]
+module-name = "dp_boot_native"

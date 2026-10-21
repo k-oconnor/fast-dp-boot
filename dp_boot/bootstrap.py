@@ -26,7 +26,10 @@ def _budget(memory_bytes):
     return integer(memory_bytes, "memory_bytes", 64)
 
 
-def _mean_draws(x, replicates, rng, memory_bytes):
+def _mean_draws(x, replicates, rng, memory_bytes, backend="numpy"):
+    if backend == "rust":
+        from ._rust import mean_draws
+        return mean_draws(x, replicates, rng)
     # Both indices and gathered float64 values occupy 8 bytes per draw.
     capacity = max(1, memory_bytes // 16)
     n = len(x)
@@ -44,14 +47,17 @@ def _mean_draws(x, replicates, rng, memory_bytes):
     return out
 
 
-def _mean_counts(x, replicates, rng, memory_bytes, auto=False):
+def _mean_counts(x, replicates, rng, memory_bytes, auto=False, backend="numpy"):
     values, counts = np.unique(x, return_counts=True)
     if 16 * len(values) > memory_bytes or (auto and len(values) > max(32, len(x) // 8)):
-        return _mean_draws(x, replicates, rng, memory_bytes)
-    return _count_draws(values, counts, len(x), replicates, rng, memory_bytes)
+        return _mean_draws(x, replicates, rng, memory_bytes, backend=backend)
+    return _count_draws(values, counts, len(x), replicates, rng, memory_bytes, backend=backend)
 
 
-def _count_draws(values, counts, n, replicates, rng, memory_bytes):
+def _count_draws(values, counts, n, replicates, rng, memory_bytes, backend="numpy"):
+    if backend == "rust":
+        from ._rust import mean_counts
+        return mean_counts(values, np.asarray(counts, dtype=np.uint64), replicates, rng)
     probabilities = counts / n
     batch = max(1, min(replicates, memory_bytes // max(16 * len(values), 1)))
     out = np.empty(replicates)
@@ -63,13 +69,15 @@ def _count_draws(values, counts, n, replicates, rng, memory_bytes):
 
 
 def bootstrap_mean(data, *, bounds, replicates, calibration, method="auto",
-                   memory_bytes=32 * 1024**2, rng=None):
+                   memory_bytes=32 * 1024**2, rng=None, backend="numpy"):
     """Clip to public bounds, exact bootstrap means, then Gaussian perturbation.
 
     Counts compress identical values losslessly; no binning, Poisson bootstrap,
     or normal approximation. All-unique data generally favor method='draws'.
     Budget covers resampling scratch arrays, excluding input/unique/output.
     Do not release timings or data-dependent support size as private outputs.
+    backend='rust' selects the optional native sampler; seeds reproduce within
+    a backend, not across backends. Gaussian noise is still added by NumPy.
     """
     x = _data(data)
     if x.ndim != 1:
@@ -79,14 +87,15 @@ def bootstrap_mean(data, *, bounds, replicates, calibration, method="auto",
         raise ValueError("bounds must be finite and increasing")
     integer(replicates, "replicates", 2)
     _budget(memory_bytes)
+    _check_backend(backend)
     _check_calibration(calibration)
     _check_binding(calibration, len(x), replicates, (high - low) / len(x))
     x = np.clip(x, low, high)
     rng = np.random.default_rng(rng)
     if method in ("counts", "auto"):
-        estimates = _mean_counts(x, replicates, rng, memory_bytes, auto=method == "auto")
+        estimates = _mean_counts(x, replicates, rng, memory_bytes, auto=method == "auto", backend=backend)
     elif method == "draws":
-        estimates = _mean_draws(x, replicates, rng, memory_bytes)
+        estimates = _mean_draws(x, replicates, rng, memory_bytes, backend=backend)
     else:
         raise ValueError("method must be 'auto', 'counts' or 'draws'")
     estimates += rng.normal(0, calibration.sigma, size=estimates.shape)
@@ -94,11 +103,12 @@ def bootstrap_mean(data, *, bounds, replicates, calibration, method="auto",
 
 
 def bootstrap_mean_from_counts(values, counts, *, bounds, replicates, calibration,
-                               memory_bytes=32 * 1024**2, rng=None):
+                               memory_bytes=32 * 1024**2, rng=None, backend="numpy"):
     """Exact mean bootstrap from a private preaggregated frequency table.
 
     Avoids expanding records. n=sum(counts) must be public and fixed across
     neighbors. The frequency table itself must remain confidential.
+    backend='rust' requires the optional extension and total count <= 2**53.
     """
     values = _data(values)
     counts = np.asarray(counts)
@@ -112,14 +122,20 @@ def bootstrap_mean_from_counts(values, counts, *, bounds, replicates, calibratio
         raise ValueError("bounds must be finite and increasing")
     integer(replicates, "replicates", 2)
     _budget(memory_bytes)
+    _check_backend(backend)
     if 16 * len(values) > memory_bytes:
         raise ValueError("frequency table needs at least 16*support_size scratch bytes")
     _check_calibration(calibration)
     _check_binding(calibration, n, replicates, (high-low)/n)
     rng = np.random.default_rng(rng)
-    estimates = _count_draws(np.clip(values, low, high), counts, n, replicates, rng, memory_bytes)
+    estimates = _count_draws(np.clip(values, low, high), counts, n, replicates, rng, memory_bytes, backend=backend)
     estimates += rng.normal(0, calibration.sigma, size=estimates.shape)
     return Release(estimates, calibration)
+
+
+def _check_backend(backend):
+    if backend not in ("numpy", "rust"):
+        raise ValueError("backend must be 'numpy' or 'rust'")
 
 
 def _check_calibration(calibration):
