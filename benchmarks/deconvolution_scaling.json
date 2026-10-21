@@ -1,0 +1,34 @@
+[
+  {
+    "grid_size": 1000,
+    "seconds": 0.014080299995839596,
+    "converged": true,
+    "peak_process_working_set_bytes": 105271296,
+    "hypothetical_single_dense_covariance_bytes": 8000000,
+    "notes": "Process peak includes Python/SciPy baseline; no full covariance materialized."
+  },
+  {
+    "grid_size": 4000,
+    "seconds": 0.035420099971815944,
+    "converged": true,
+    "peak_process_working_set_bytes": 112508928,
+    "hypothetical_single_dense_covariance_bytes": 128000000,
+    "notes": "Process peak includes Python/SciPy baseline; no full covariance materialized."
+  },
+  {
+    "grid_size": 16000,
+    "seconds": 0.15614110010210425,
+    "converged": true,
+    "peak_process_working_set_bytes": 134422528,
+    "hypothetical_single_dense_covariance_bytes": 2048000000,
+    "notes": "Process peak includes Python/SciPy baseline; no full covariance materialized."
+  },
+  {
+    "grid_size": 64000,
+    "seconds": 0.5843912999844179,
+    "converged": true,
+    "peak_process_working_set_bytes": 224972800,
+    "hypothetical_single_dense_covariance_bytes": 32768000000,
+    "notes": "Process peak includes Python/SciPy baseline; no full covariance materialized."
+  }
+]

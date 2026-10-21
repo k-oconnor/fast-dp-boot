@@ -1,0 +1,1524 @@
+{
+  "trials": 100,
+  "n": 2000,
+  "replicates": 200,
+  "seed": 20261021,
+  "r_version": "4.6.0",
+  "deconvolveR_version": "1.2-2",
+  "r_likelihood_shape": [
+    39,
+    1000
+  ],
+  "rows": [
+    {
+      "trial": 1,
+      "r_seconds": 0.75,
+      "python_seconds": 0.012892600032500923,
+      "r_interval": [
+        0.478109156593891,
+        0.512233828127794
+      ],
+      "python_interval": [
+        0.478109156593891,
+        0.5122338281277937
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.0077996841505463e-08
+    },
+    {
+      "trial": 2,
+      "r_seconds": 0.62,
+      "python_seconds": 0.010005100048147142,
+      "r_interval": [
+        0.475240514610415,
+        0.51113729298419
+      ],
+      "python_interval": [
+        0.475240514610415,
+        0.5111372929841902
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.617096926480158e-10
+    },
+    {
+      "trial": 3,
+      "r_seconds": 0.64,
+      "python_seconds": 0.009495599893853068,
+      "r_interval": [
+        0.498303357115256,
+        0.529187115424442
+      ],
+      "python_interval": [
+        0.49830335711525603,
+        0.5291871154244417
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.760353388202134e-11
+    },
+    {
+      "trial": 4,
+      "r_seconds": 0.63,
+      "python_seconds": 0.009789800038561225,
+      "r_interval": [
+        0.492926290821394,
+        0.52394261357416
+      ],
+      "python_interval": [
+        0.49292629082139383,
+        0.5239426135741599
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.182668183500994e-10
+    },
+    {
+      "trial": 5,
+      "r_seconds": 0.65,
+      "python_seconds": 0.009861000115051866,
+      "r_interval": [
+        0.494703534946027,
+        0.527297361884657
+      ],
+      "python_interval": [
+        0.4947035349460267,
+        0.5272973618846569
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.0044772636749215e-09
+    },
+    {
+      "trial": 6,
+      "r_seconds": 0.65,
+      "python_seconds": 0.009536199970170856,
+      "r_interval": [
+        0.471795633713589,
+        0.49970116615211
+      ],
+      "python_interval": [
+        0.4717956337135893,
+        0.49970116615210985
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.854957822019728e-10
+    },
+    {
+      "trial": 7,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009517000056803226,
+      "r_interval": [
+        0.487001848768412,
+        0.519472589375068
+      ],
+      "python_interval": [
+        0.4870018487684121,
+        0.5194725893750676
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.6718943035565204e-09
+    },
+    {
+      "trial": 8,
+      "r_seconds": 0.66,
+      "python_seconds": 0.009904899983666837,
+      "r_interval": [
+        0.487782276434035,
+        0.516005858424401
+      ],
+      "python_interval": [
+        0.48778227643403504,
+        0.5160058584244014
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.062439287217835e-09
+    },
+    {
+      "trial": 9,
+      "r_seconds": 0.62,
+      "python_seconds": 0.009416399989277124,
+      "r_interval": [
+        0.491363361674747,
+        0.521753214474619
+      ],
+      "python_interval": [
+        0.4913633616747468,
+        0.5217532144746193
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.4794139871487921e-10
+    },
+    {
+      "trial": 10,
+      "r_seconds": 0.66,
+      "python_seconds": 0.009364600060507655,
+      "r_interval": [
+        0.480189700978627,
+        0.509225841847449
+      ],
+      "python_interval": [
+        0.48018970097862723,
+        0.509225841847449
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.291460829896625e-14
+    },
+    {
+      "trial": 11,
+      "r_seconds": 0.67,
+      "python_seconds": 0.009334400063380599,
+      "r_interval": [
+        0.480604042786671,
+        0.511439564234882
+      ],
+      "python_interval": [
+        0.4806040427866715,
+        0.5114395642348816
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.2366972307331636e-09
+    },
+    {
+      "trial": 12,
+      "r_seconds": 0.659999999999999,
+      "python_seconds": 0.009425599942915142,
+      "r_interval": [
+        0.485841672956307,
+        0.514260438022628
+      ],
+      "python_interval": [
+        0.48584167295630704,
+        0.5142604380226281
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.1356694057385042e-09
+    },
+    {
+      "trial": 13,
+      "r_seconds": 0.620000000000001,
+      "python_seconds": 0.008884100010618567,
+      "r_interval": [
+        0.490748784218946,
+        0.51790598438589
+      ],
+      "python_interval": [
+        0.49074878421894563,
+        0.5179059843858901
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.2211815026151882e-10
+    },
+    {
+      "trial": 14,
+      "r_seconds": 0.709999999999999,
+      "python_seconds": 0.009659499977715313,
+      "r_interval": [
+        0.483321330853469,
+        0.510274762846167
+      ],
+      "python_interval": [
+        0.48332133085346907,
+        0.5102747628461669
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.885567889325923e-09
+    },
+    {
+      "trial": 15,
+      "r_seconds": 0.790000000000001,
+      "python_seconds": 0.009317399933934212,
+      "r_interval": [
+        0.478806718600089,
+        0.509409053400903
+      ],
+      "python_interval": [
+        0.4788067186000891,
+        0.5094090534009035
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.203422746129064e-11
+    },
+    {
+      "trial": 16,
+      "r_seconds": 0.74,
+      "python_seconds": 0.009372100001201034,
+      "r_interval": [
+        0.499600289191503,
+        0.531787510822593
+      ],
+      "python_interval": [
+        0.4996002891915034,
+        0.5317875108225925
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.2005175459582915e-11
+    },
+    {
+      "trial": 17,
+      "r_seconds": 0.619999999999999,
+      "python_seconds": 0.009288299945183098,
+      "r_interval": [
+        0.500099752305723,
+        0.530856915424906
+      ],
+      "python_interval": [
+        0.5000997523057235,
+        0.5308569154249055
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.0213211660013997e-10
+    },
+    {
+      "trial": 18,
+      "r_seconds": 0.74,
+      "python_seconds": 0.009311400004662573,
+      "r_interval": [
+        0.480728877679205,
+        0.510564626763702
+      ],
+      "python_interval": [
+        0.48072887767920486,
+        0.5105646267637024
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.414467987181922e-10
+    },
+    {
+      "trial": 19,
+      "r_seconds": 0.75,
+      "python_seconds": 0.009920399985276163,
+      "r_interval": [
+        0.474942989999589,
+        0.504515655130615
+      ],
+      "python_interval": [
+        0.47494298999958895,
+        0.5045156551306151
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.11401542105083e-09
+    },
+    {
+      "trial": 20,
+      "r_seconds": 0.77,
+      "python_seconds": 0.009788200026378036,
+      "r_interval": [
+        0.480722849088157,
+        0.516160634280907
+      ],
+      "python_interval": [
+        0.48072284908815677,
+        0.5161606342809074
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.965293330852269e-09
+    },
+    {
+      "trial": 21,
+      "r_seconds": 0.73,
+      "python_seconds": 0.010029299999587238,
+      "r_interval": [
+        0.491563267906875,
+        0.521781359628667
+      ],
+      "python_interval": [
+        0.49156326790687543,
+        0.5217813596286669
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.877217644692287e-09
+    },
+    {
+      "trial": 22,
+      "r_seconds": 0.720000000000001,
+      "python_seconds": 0.009080800111405551,
+      "r_interval": [
+        0.469315984236443,
+        0.500368308944769
+      ],
+      "python_interval": [
+        0.46931598423644294,
+        0.5003683089447692
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.9720933636113713e-09
+    },
+    {
+      "trial": 23,
+      "r_seconds": 0.66,
+      "python_seconds": 0.012683800072409213,
+      "r_interval": [
+        0.466544181768834,
+        0.49625142376337
+      ],
+      "python_interval": [
+        0.46654418176883444,
+        0.49625142376336995
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.259079614132304e-11
+    },
+    {
+      "trial": 24,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009604500024579465,
+      "r_interval": [
+        0.483272261848918,
+        0.515203663110451
+      ],
+      "python_interval": [
+        0.48327226184891775,
+        0.5152036631104513
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.643828294652707e-11
+    },
+    {
+      "trial": 25,
+      "r_seconds": 0.670000000000002,
+      "python_seconds": 0.009306099964305758,
+      "r_interval": [
+        0.483170883952156,
+        0.508503922831936
+      ],
+      "python_interval": [
+        0.48317088395215585,
+        0.508503922831936
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.21597273653407e-10
+    },
+    {
+      "trial": 26,
+      "r_seconds": 0.66,
+      "python_seconds": 0.009253400028683245,
+      "r_interval": [
+        0.487802244034694,
+        0.522985033308881
+      ],
+      "python_interval": [
+        0.48780224403469447,
+        0.5229850333088811
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.2818582306728388e-10
+    },
+    {
+      "trial": 27,
+      "r_seconds": 0.739999999999998,
+      "python_seconds": 0.009363299934193492,
+      "r_interval": [
+        0.470087527472237,
+        0.500721997514167
+      ],
+      "python_interval": [
+        0.47008752747223725,
+        0.5007219975141673
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.894812498714487e-11
+    },
+    {
+      "trial": 28,
+      "r_seconds": 0.670000000000002,
+      "python_seconds": 0.014878800022415817,
+      "r_interval": [
+        0.476520051500415,
+        0.507319660814364
+      ],
+      "python_interval": [
+        0.47652005150041477,
+        0.5073196608143639
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.14020237432733e-10
+    },
+    {
+      "trial": 29,
+      "r_seconds": 0.68,
+      "python_seconds": 0.009103800053708255,
+      "r_interval": [
+        0.476371258229894,
+        0.502635762658846
+      ],
+      "python_interval": [
+        0.47637125822989423,
+        0.5026357626588464
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.439935238382709e-10
+    },
+    {
+      "trial": 30,
+      "r_seconds": 0.689999999999998,
+      "python_seconds": 0.009230899973772466,
+      "r_interval": [
+        0.483664268448525,
+        0.51486963012605
+      ],
+      "python_interval": [
+        0.483664268448525,
+        0.5148696301260504
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.342573621720966e-10
+    },
+    {
+      "trial": 31,
+      "r_seconds": 0.75,
+      "python_seconds": 0.009150799945928156,
+      "r_interval": [
+        0.47774039057112,
+        0.50671732449852
+      ],
+      "python_interval": [
+        0.4777403905711196,
+        0.5067173244985201
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.958541841542207e-09
+    },
+    {
+      "trial": 32,
+      "r_seconds": 0.860000000000003,
+      "python_seconds": 0.010822499985806644,
+      "r_interval": [
+        0.478498085792588,
+        0.511342185177309
+      ],
+      "python_interval": [
+        0.47849808579258846,
+        0.5113421851773092
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.2439733687585885e-09
+    },
+    {
+      "trial": 33,
+      "r_seconds": 0.890000000000001,
+      "python_seconds": 0.010754299932159483,
+      "r_interval": [
+        0.488397010173409,
+        0.522744360400484
+      ],
+      "python_interval": [
+        0.48839701017340914,
+        0.5227443604004843
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.582617922967771e-10
+    },
+    {
+      "trial": 34,
+      "r_seconds": 0.859999999999999,
+      "python_seconds": 0.009532600059174001,
+      "r_interval": [
+        0.484371729600944,
+        0.521004493671004
+      ],
+      "python_interval": [
+        0.48437172960094427,
+        0.5210044936710041
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.9933212025424751e-10
+    },
+    {
+      "trial": 35,
+      "r_seconds": 0.869999999999997,
+      "python_seconds": 0.009145499905571342,
+      "r_interval": [
+        0.490598510440387,
+        0.521316523322617
+      ],
+      "python_interval": [
+        0.4905985104403874,
+        0.5213165233226171
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.049690027236764e-09
+    },
+    {
+      "trial": 36,
+      "r_seconds": 0.710000000000001,
+      "python_seconds": 0.009637700044550002,
+      "r_interval": [
+        0.482732094604589,
+        0.518857194531688
+      ],
+      "python_interval": [
+        0.482732094604589,
+        0.5188571945316883
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.696456138019727e-11
+    },
+    {
+      "trial": 37,
+      "r_seconds": 0.670000000000002,
+      "python_seconds": 0.010382300009950995,
+      "r_interval": [
+        0.499377689956346,
+        0.531412154101652
+      ],
+      "python_interval": [
+        0.49937768995634635,
+        0.5314121541016521
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.8314850464283836e-13
+    },
+    {
+      "trial": 38,
+      "r_seconds": 0.73,
+      "python_seconds": 0.009782799985259771,
+      "r_interval": [
+        0.480337128176731,
+        0.509470532386777
+      ],
+      "python_interval": [
+        0.48033712817673146,
+        0.5094705323867766
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.704515028069011e-10
+    },
+    {
+      "trial": 39,
+      "r_seconds": 0.889999999999997,
+      "python_seconds": 0.009701799950562418,
+      "r_interval": [
+        0.488849958713638,
+        0.516522360777895
+      ],
+      "python_interval": [
+        0.48884995871363845,
+        0.516522360777895
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.830209024946463e-09
+    },
+    {
+      "trial": 40,
+      "r_seconds": 1.02,
+      "python_seconds": 0.009268100024200976,
+      "r_interval": [
+        0.492978039906011,
+        0.524162935275784
+      ],
+      "python_interval": [
+        0.4929780399060112,
+        0.5241629352757842
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.017577966333505e-10
+    },
+    {
+      "trial": 41,
+      "r_seconds": 1.04,
+      "python_seconds": 0.009251400013454258,
+      "r_interval": [
+        0.480382588817479,
+        0.514266823689631
+      ],
+      "python_interval": [
+        0.48038258881747875,
+        0.5142668236896307
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.049740778833133e-09
+    },
+    {
+      "trial": 42,
+      "r_seconds": 1.02,
+      "python_seconds": 0.010480000055395067,
+      "r_interval": [
+        0.475803846117906,
+        0.508019367669409
+      ],
+      "python_interval": [
+        0.47580384611790644,
+        0.5080193676694087
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.5053362029116002e-10
+    },
+    {
+      "trial": 43,
+      "r_seconds": 1.05,
+      "python_seconds": 0.009830299997702241,
+      "r_interval": [
+        0.487504618664514,
+        0.516998185093164
+      ],
+      "python_interval": [
+        0.4875046186645141,
+        0.516998185093164
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.395571489597017e-10
+    },
+    {
+      "trial": 44,
+      "r_seconds": 0.759999999999998,
+      "python_seconds": 0.009447999997064471,
+      "r_interval": [
+        0.487393987170103,
+        0.51734827659198
+      ],
+      "python_interval": [
+        0.48739398717010346,
+        0.51734827659198
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.0284149920547492e-10
+    },
+    {
+      "trial": 45,
+      "r_seconds": 0.780000000000001,
+      "python_seconds": 0.009652300039306283,
+      "r_interval": [
+        0.496865595382167,
+        0.527552120226589
+      ],
+      "python_interval": [
+        0.49686559538216724,
+        0.5275521202265893
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.1559784657277916e-09
+    },
+    {
+      "trial": 46,
+      "r_seconds": 0.68,
+      "python_seconds": 0.010930599994026124,
+      "r_interval": [
+        0.495203188256438,
+        0.525465771404243
+      ],
+      "python_interval": [
+        0.49520318825643833,
+        0.5254657714042432
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.774796163147354e-09
+    },
+    {
+      "trial": 47,
+      "r_seconds": 0.700000000000003,
+      "python_seconds": 0.009305299958214164,
+      "r_interval": [
+        0.481368101954632,
+        0.510496432661112
+      ],
+      "python_interval": [
+        0.4813681019546318,
+        0.510496432661112
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.950873351752591e-09
+    },
+    {
+      "trial": 48,
+      "r_seconds": 0.779999999999994,
+      "python_seconds": 0.009409199934452772,
+      "r_interval": [
+        0.485771406654251,
+        0.516305736954209
+      ],
+      "python_interval": [
+        0.48577140665425106,
+        0.5163057369542093
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.801175149259933e-11
+    },
+    {
+      "trial": 49,
+      "r_seconds": 0.830000000000005,
+      "python_seconds": 0.00996669998858124,
+      "r_interval": [
+        0.48924509139778,
+        0.521387044738737
+      ],
+      "python_interval": [
+        0.4892450913977797,
+        0.5213870447387369
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.25096055315322e-10
+    },
+    {
+      "trial": 50,
+      "r_seconds": 0.729999999999997,
+      "python_seconds": 0.012231400003656745,
+      "r_interval": [
+        0.475424901268112,
+        0.511472867501401
+      ],
+      "python_interval": [
+        0.47542490126811243,
+        0.5114728675014009
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.918664863768797e-12
+    },
+    {
+      "trial": 51,
+      "r_seconds": 0.630000000000003,
+      "python_seconds": 0.009885799954645336,
+      "r_interval": [
+        0.484882688367894,
+        0.513040232893737
+      ],
+      "python_interval": [
+        0.4848826883678941,
+        0.5130402328937369
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.9063682160647133e-09
+    },
+    {
+      "trial": 52,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.00974020001012832,
+      "r_interval": [
+        0.463575398526786,
+        0.502093380769145
+      ],
+      "python_interval": [
+        0.4635753985267864,
+        0.5020933807691452
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.191972741152128e-10
+    },
+    {
+      "trial": 53,
+      "r_seconds": 0.619999999999997,
+      "python_seconds": 0.01104829995892942,
+      "r_interval": [
+        0.480166759029462,
+        0.513409387808265
+      ],
+      "python_interval": [
+        0.48016675902946243,
+        0.5134093878082652
+      ],
+      "python_converged": true,
+      "gradient_norm": 7.054648532012209e-12
+    },
+    {
+      "trial": 54,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.010002600029110909,
+      "r_interval": [
+        0.487467941728938,
+        0.51696211153346
+      ],
+      "python_interval": [
+        0.48746794172893787,
+        0.5169621115334603
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.6093590055917844e-10
+    },
+    {
+      "trial": 55,
+      "r_seconds": 0.589999999999996,
+      "python_seconds": 0.009445899981074035,
+      "r_interval": [
+        0.494189980273583,
+        0.529070754946841
+      ],
+      "python_interval": [
+        0.49418998027358335,
+        0.5290707549468405
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.795480596480161e-11
+    },
+    {
+      "trial": 56,
+      "r_seconds": 0.589999999999996,
+      "python_seconds": 0.010490700020454824,
+      "r_interval": [
+        0.490631482914075,
+        0.51889825913095
+      ],
+      "python_interval": [
+        0.49063148291407516,
+        0.5188982591309504
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.433278377400594e-09
+    },
+    {
+      "trial": 57,
+      "r_seconds": 0.590000000000003,
+      "python_seconds": 0.009715800057165325,
+      "r_interval": [
+        0.480285980257684,
+        0.511518485102672
+      ],
+      "python_interval": [
+        0.48028598025768393,
+        0.5115184851026723
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.071296160785721e-11
+    },
+    {
+      "trial": 58,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.009194299927912652,
+      "r_interval": [
+        0.484880868472285,
+        0.512882881964255
+      ],
+      "python_interval": [
+        0.4848808684722854,
+        0.5128828819642555
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.684312411764921e-11
+    },
+    {
+      "trial": 59,
+      "r_seconds": 0.630000000000003,
+      "python_seconds": 0.00983769993763417,
+      "r_interval": [
+        0.482736292495511,
+        0.514391580606902
+      ],
+      "python_interval": [
+        0.4827362924955107,
+        0.5143915806069024
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.722966838120122e-09
+    },
+    {
+      "trial": 60,
+      "r_seconds": 0.619999999999997,
+      "python_seconds": 0.009415099979378283,
+      "r_interval": [
+        0.48896102369635,
+        0.516338126007664
+      ],
+      "python_interval": [
+        0.4889610236963504,
+        0.5163381260076645
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.22128092098162e-10
+    },
+    {
+      "trial": 61,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.015587900066748261,
+      "r_interval": [
+        0.486007347287807,
+        0.51782324669581
+      ],
+      "python_interval": [
+        0.4860073472878067,
+        0.5178232466958104
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.8687611447763004e-10
+    },
+    {
+      "trial": 62,
+      "r_seconds": 0.630000000000003,
+      "python_seconds": 0.010273899999447167,
+      "r_interval": [
+        0.49863279625638,
+        0.530521825622696
+      ],
+      "python_interval": [
+        0.4986327962563804,
+        0.5305218256226959
+      ],
+      "python_converged": true,
+      "gradient_norm": 7.163011850330747e-11
+    },
+    {
+      "trial": 63,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.010559499962255359,
+      "r_interval": [
+        0.503967711397262,
+        0.538977168457032
+      ],
+      "python_interval": [
+        0.5039677113972617,
+        0.5389771684570325
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.762516718636594e-09
+    },
+    {
+      "trial": 64,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009489500080235302,
+      "r_interval": [
+        0.484280117535205,
+        0.514482988508567
+      ],
+      "python_interval": [
+        0.4842801175352054,
+        0.5144829885085667
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.3781034086400865e-10
+    },
+    {
+      "trial": 65,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009549899958074093,
+      "r_interval": [
+        0.496253593286776,
+        0.527017184924887
+      ],
+      "python_interval": [
+        0.49625359328677576,
+        0.5270171849248871
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.852658304546395e-11
+    },
+    {
+      "trial": 66,
+      "r_seconds": 0.600000000000001,
+      "python_seconds": 0.009277099976316094,
+      "r_interval": [
+        0.480065068980316,
+        0.509459198659802
+      ],
+      "python_interval": [
+        0.480065068980316,
+        0.5094591986598017
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.6713824768643804e-11
+    },
+    {
+      "trial": 67,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009598299977369606,
+      "r_interval": [
+        0.48857090678631,
+        0.519736518427564
+      ],
+      "python_interval": [
+        0.4885709067863103,
+        0.5197365184275639
+      ],
+      "python_converged": true,
+      "gradient_norm": 7.428056642000413e-10
+    },
+    {
+      "trial": 68,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.010071199969388545,
+      "r_interval": [
+        0.496554429227751,
+        0.52459689520321
+      ],
+      "python_interval": [
+        0.4965544292277509,
+        0.5245968952032095
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.6234947830540136e-09
+    },
+    {
+      "trial": 69,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009427499957382679,
+      "r_interval": [
+        0.497385798503578,
+        0.526931232437479
+      ],
+      "python_interval": [
+        0.49738579850357845,
+        0.5269312324374794
+      ],
+      "python_converged": true,
+      "gradient_norm": 8.514917243518383e-10
+    },
+    {
+      "trial": 70,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.010472099995240569,
+      "r_interval": [
+        0.476441723907996,
+        0.510208614562767
+      ],
+      "python_interval": [
+        0.4764417239079956,
+        0.5102086145627669
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.562344863539124e-12
+    },
+    {
+      "trial": 71,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.00958589999936521,
+      "r_interval": [
+        0.488957677129055,
+        0.520758282620938
+      ],
+      "python_interval": [
+        0.4889576771290553,
+        0.5207582826209377
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.4828366019267207e-10
+    },
+    {
+      "trial": 72,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009540800005197525,
+      "r_interval": [
+        0.467582539439586,
+        0.502262862758167
+      ],
+      "python_interval": [
+        0.46758253943958566,
+        0.5022628627581672
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.444383320228006e-10
+    },
+    {
+      "trial": 73,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009507699985988438,
+      "r_interval": [
+        0.470481490443182,
+        0.505041496046727
+      ],
+      "python_interval": [
+        0.47048149044318194,
+        0.5050414960467269
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.978238374452886e-10
+    },
+    {
+      "trial": 74,
+      "r_seconds": 0.630000000000003,
+      "python_seconds": 0.009440100053325295,
+      "r_interval": [
+        0.494023251256614,
+        0.528614565277777
+      ],
+      "python_interval": [
+        0.49402325125661367,
+        0.5286145652777766
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.9881028767709807e-10
+    },
+    {
+      "trial": 75,
+      "r_seconds": 0.659999999999997,
+      "python_seconds": 0.009410599945113063,
+      "r_interval": [
+        0.502714534746485,
+        0.536345074878749
+      ],
+      "python_interval": [
+        0.5027145347464848,
+        0.5363450748787494
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.0894442773200517e-10
+    },
+    {
+      "trial": 76,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.008996900054626167,
+      "r_interval": [
+        0.496933489390463,
+        0.528626678165338
+      ],
+      "python_interval": [
+        0.49693348939046283,
+        0.5286266781653381
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.3623243078650944e-12
+    },
+    {
+      "trial": 77,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.009661099989898503,
+      "r_interval": [
+        0.487615718830833,
+        0.5236770717991
+      ],
+      "python_interval": [
+        0.487615718830833,
+        0.5236770717990996
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.558474431259896e-11
+    },
+    {
+      "trial": 78,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.00972680002450943,
+      "r_interval": [
+        0.472367683833737,
+        0.507024254476614
+      ],
+      "python_interval": [
+        0.4723676838337368,
+        0.5070242544766145
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.859525450287336e-10
+    },
+    {
+      "trial": 79,
+      "r_seconds": 0.660000000000004,
+      "python_seconds": 0.013902200036682189,
+      "r_interval": [
+        0.491659110340845,
+        0.52013523735817
+      ],
+      "python_interval": [
+        0.49165911034084536,
+        0.5201352373581704
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.110994795108013e-11
+    },
+    {
+      "trial": 80,
+      "r_seconds": 0.639999999999993,
+      "python_seconds": 0.01390510005876422,
+      "r_interval": [
+        0.472199477071762,
+        0.506173818566799
+      ],
+      "python_interval": [
+        0.47219947707176163,
+        0.5061738185667991
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.987454893523591e-12
+    },
+    {
+      "trial": 81,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.010708399931900203,
+      "r_interval": [
+        0.490226081111156,
+        0.52382128262895
+      ],
+      "python_interval": [
+        0.4902260811111558,
+        0.5238212826289502
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.95587876292447e-10
+    },
+    {
+      "trial": 82,
+      "r_seconds": 0.670000000000002,
+      "python_seconds": 0.009949099970981479,
+      "r_interval": [
+        0.486735654133447,
+        0.518606707221161
+      ],
+      "python_interval": [
+        0.48673565413344655,
+        0.5186067072211606
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.070461841534147e-12
+    },
+    {
+      "trial": 83,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009385199984535575,
+      "r_interval": [
+        0.500702122848093,
+        0.529327052772147
+      ],
+      "python_interval": [
+        0.500702122848093,
+        0.5293270527721469
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.378268994719718e-11
+    },
+    {
+      "trial": 84,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009592299931682646,
+      "r_interval": [
+        0.492669751626141,
+        0.525244826560748
+      ],
+      "python_interval": [
+        0.49266975162614135,
+        0.525244826560748
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.610222009178045e-11
+    },
+    {
+      "trial": 85,
+      "r_seconds": 0.659999999999997,
+      "python_seconds": 0.009781199973076582,
+      "r_interval": [
+        0.485921722354229,
+        0.517049526429746
+      ],
+      "python_interval": [
+        0.48592172235422915,
+        0.5170495264297463
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.3827260170184985e-10
+    },
+    {
+      "trial": 86,
+      "r_seconds": 0.660000000000004,
+      "python_seconds": 0.009755800012499094,
+      "r_interval": [
+        0.481633755174094,
+        0.513424934892188
+      ],
+      "python_interval": [
+        0.4816337551740944,
+        0.5134249348921881
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.157601514645279e-10
+    },
+    {
+      "trial": 87,
+      "r_seconds": 0.649999999999999,
+      "python_seconds": 0.010013899998739362,
+      "r_interval": [
+        0.483579997892511,
+        0.513611627009085
+      ],
+      "python_interval": [
+        0.48357999789251077,
+        0.5136116270090847
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.8510557510160766e-12
+    },
+    {
+      "trial": 88,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009387800004333258,
+      "r_interval": [
+        0.500184467721132,
+        0.53052160463991
+      ],
+      "python_interval": [
+        0.5001844677211321,
+        0.5305216046399103
+      ],
+      "python_converged": true,
+      "gradient_norm": 5.077965825606157e-12
+    },
+    {
+      "trial": 89,
+      "r_seconds": 0.660000000000004,
+      "python_seconds": 0.00953999999910593,
+      "r_interval": [
+        0.485981645244739,
+        0.5138823194691
+      ],
+      "python_interval": [
+        0.48598164524473925,
+        0.5138823194690998
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.875887024523683e-11
+    },
+    {
+      "trial": 90,
+      "r_seconds": 0.639999999999993,
+      "python_seconds": 0.009685299941338599,
+      "r_interval": [
+        0.485810212570211,
+        0.514165536097426
+      ],
+      "python_interval": [
+        0.48581021257021073,
+        0.5141655360974264
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.6359110167083486e-12
+    },
+    {
+      "trial": 91,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009170799981802702,
+      "r_interval": [
+        0.501702342369884,
+        0.530958654652703
+      ],
+      "python_interval": [
+        0.501702342369884,
+        0.5309586546527031
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.9059435413536505e-11
+    },
+    {
+      "trial": 92,
+      "r_seconds": 0.660000000000004,
+      "python_seconds": 0.011268800008110702,
+      "r_interval": [
+        0.482871830726977,
+        0.510980539008985
+      ],
+      "python_interval": [
+        0.48287183072697676,
+        0.5109805390089852
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.85428082558159e-09
+    },
+    {
+      "trial": 93,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009943700046278536,
+      "r_interval": [
+        0.468627502832224,
+        0.504418432217779
+      ],
+      "python_interval": [
+        0.4686275028322236,
+        0.504418432217779
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.4444198054585087e-10
+    },
+    {
+      "trial": 94,
+      "r_seconds": 0.670000000000002,
+      "python_seconds": 0.010633799945935607,
+      "r_interval": [
+        0.498049210554313,
+        0.526862522966512
+      ],
+      "python_interval": [
+        0.49804921055431334,
+        0.5268625229665116
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.7496085275015005e-09
+    },
+    {
+      "trial": 95,
+      "r_seconds": 0.61999999999999,
+      "python_seconds": 0.01077860000077635,
+      "r_interval": [
+        0.479122114281374,
+        0.506376687534771
+      ],
+      "python_interval": [
+        0.4791221142813743,
+        0.5063766875347712
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.357569638984259e-09
+    },
+    {
+      "trial": 96,
+      "r_seconds": 0.650000000000006,
+      "python_seconds": 0.009140799986198545,
+      "r_interval": [
+        0.496817863786517,
+        0.525660420698657
+      ],
+      "python_interval": [
+        0.49681786378651666,
+        0.5256604206986575
+      ],
+      "python_converged": true,
+      "gradient_norm": 9.107621185000525e-10
+    },
+    {
+      "trial": 97,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.010241199983283877,
+      "r_interval": [
+        0.478347197268372,
+        0.508874428088408
+      ],
+      "python_interval": [
+        0.478347197268372,
+        0.5088744280884084
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.4925837782685534e-10
+    },
+    {
+      "trial": 98,
+      "r_seconds": 0.650000000000006,
+      "python_seconds": 0.010509600047953427,
+      "r_interval": [
+        0.478731736738052,
+        0.51216471994771
+      ],
+      "python_interval": [
+        0.4787317367380516,
+        0.5121647199477095
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.592898969814964e-09
+    },
+    {
+      "trial": 99,
+      "r_seconds": 0.629999999999995,
+      "python_seconds": 0.009664900018833578,
+      "r_interval": [
+        0.485534656047397,
+        0.513712807434322
+      ],
+      "python_interval": [
+        0.48553465604739715,
+        0.5137128074343225
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.531350796168951e-09
+    },
+    {
+      "trial": 100,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.00996359996497631,
+      "r_interval": [
+        0.475845497352575,
+        0.503844064789304
+      ],
+      "python_interval": [
+        0.4758454973525752,
+        0.5038440647893038
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.0173548531389187e-09
+    }
+  ],
+  "summary": {
+    "r_median_seconds": 0.650000000000003,
+    "python_median_seconds": 0.009660299983806908,
+    "max_interval_difference": 5.551115123125783e-16,
+    "r_coverage": 0.92,
+    "python_coverage": 0.92,
+    "converged": 100,
+    "median_speedup": 67.28569517401804
+  },
+  "notes": "Identical private releases, model, spline basis, bins, penalty, and grid brackets. Both compute pointwise covariance-derived SEs and bias; Python retains low-rank covariance rather than eagerly materializing the full mass covariance matrix. Timings include fit and statistics; exclude process startup and CSV I/O. Per-fit single timings across multiple inputs, not a production throughput test."
+}

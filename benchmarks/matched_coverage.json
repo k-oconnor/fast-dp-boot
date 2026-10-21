@@ -1,0 +1,28 @@
+{
+  "trials": 1000,
+  "n": 2000,
+  "replicates": 200,
+  "mu": 1.0,
+  "nominal_coverage": 0.9,
+  "model": "reference",
+  "noise_multiplier": 1.125,
+  "seed": 20261021,
+  "deconvolution_converged": 1000,
+  "privacy": "paper asymptotic calibration; not a finite privacy guarantee",
+  "asymptotic": {
+    "coverage": 0.976,
+    "mean_width": 0.04342304876183494,
+    "coverage_95_percent_interval": [
+      0.9644993614686604,
+      0.9845636167664918
+    ]
+  },
+  "deconvolution": {
+    "coverage": 0.895,
+    "mean_width": 0.030953140339574303,
+    "coverage_95_percent_interval": [
+      0.8743231515446935,
+      0.9133151751754699
+    ]
+  }
+}

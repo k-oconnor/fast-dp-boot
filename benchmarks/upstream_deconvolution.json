@@ -1,0 +1,155 @@
+{
+  "trials": 10,
+  "n": 2000,
+  "replicates": 200,
+  "seed": 20261021,
+  "r_version": "4.6.0",
+  "deconvolveR_version": "1.2-2",
+  "r_likelihood_shape": [
+    39,
+    1000
+  ],
+  "rows": [
+    {
+      "trial": 1,
+      "r_seconds": 0.64,
+      "python_seconds": 0.018948000040836632,
+      "r_interval": [
+        0.478109156593891,
+        0.512233828127794
+      ],
+      "python_interval": [
+        0.4787522915619187,
+        0.5089603474585479
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 2,
+      "r_seconds": 0.63,
+      "python_seconds": 0.01300099992658943,
+      "r_interval": [
+        0.475240514610415,
+        0.51113729298419
+      ],
+      "python_interval": [
+        0.47973126402785404,
+        0.5103797390132948
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 3,
+      "r_seconds": 0.62,
+      "python_seconds": 0.013227200019173324,
+      "r_interval": [
+        0.498303357115256,
+        0.529187115424442
+      ],
+      "python_interval": [
+        0.5003462192831908,
+        0.5244405636339011
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 4,
+      "r_seconds": 0.63,
+      "python_seconds": 0.01631720003206283,
+      "r_interval": [
+        0.492926290821394,
+        0.52394261357416
+      ],
+      "python_interval": [
+        0.4950208066593632,
+        0.5235278927391992
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 5,
+      "r_seconds": 0.62,
+      "python_seconds": 0.011618000105954707,
+      "r_interval": [
+        0.494703534946027,
+        0.527297361884657
+      ],
+      "python_interval": [
+        0.4941951934685457,
+        0.522046698284357
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 6,
+      "r_seconds": 0.61,
+      "python_seconds": 0.016432100092060864,
+      "r_interval": [
+        0.471795633713589,
+        0.49970116615211
+      ],
+      "python_interval": [
+        0.46827538757151166,
+        0.5015583839753986
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 7,
+      "r_seconds": 0.63,
+      "python_seconds": 0.014079600106924772,
+      "r_interval": [
+        0.487001848768412,
+        0.519472589375068
+      ],
+      "python_interval": [
+        0.4918516561754149,
+        0.5152546495359076
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 8,
+      "r_seconds": 0.62,
+      "python_seconds": 0.014525000005960464,
+      "r_interval": [
+        0.487782276434035,
+        0.516005858424401
+      ],
+      "python_interval": [
+        0.48451364482548215,
+        0.513649743285466
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 9,
+      "r_seconds": 0.63,
+      "python_seconds": 0.015567599912174046,
+      "r_interval": [
+        0.491363361674747,
+        0.521753214474619
+      ],
+      "python_interval": [
+        0.49552838205352107,
+        0.5201648673786563
+      ],
+      "python_converged": true
+    },
+    {
+      "trial": 10,
+      "r_seconds": 0.62,
+      "python_seconds": 0.013998000067658722,
+      "r_interval": [
+        0.480189700978627,
+        0.509225841847449
+      ],
+      "python_interval": [
+        0.47601892546637675,
+        0.5079052585608157
+      ],
+      "python_converged": true
+    }
+  ],
+  "notes": "Same private releases and noise multiplier. Authors' R settings versus current native model (different basis, grid, binning and penalty). R also computes covariance, bias and SEs omitted by native model. Different computations: timings are diagnostics, not equivalent-output speedups. Ten trials cannot establish coverage."
+}

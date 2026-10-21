@@ -1,0 +1,97 @@
+{
+  "environment": {
+    "python": "3.11.9",
+    "numpy": "2.2.6",
+    "scipy": "1.16.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel"
+  },
+  "bootstrap": [
+    {
+      "n": 10000,
+      "replicates": 256,
+      "unique_values": 16,
+      "naive_seconds": 0.00740520004183054,
+      "counts_seconds": 0.0002463000128045678,
+      "tiled_draws_seconds": 0.006774799898266792,
+      "counts_speedup": 30.065772053801552,
+      "tiled_scratch_budget_bytes": 8388608,
+      "full_matrix_scratch_bytes": 40960000
+    },
+    {
+      "n": 100000,
+      "replicates": 256,
+      "unique_values": 16,
+      "naive_seconds": 0.08079010003712028,
+      "counts_seconds": 0.00040120002813637257,
+      "tiled_draws_seconds": 0.06993170001078397,
+      "counts_speedup": 201.37112256048692,
+      "tiled_scratch_budget_bytes": 8388608,
+      "full_matrix_scratch_bytes": 409600000
+    },
+    {
+      "n": 1000000,
+      "replicates": 256,
+      "unique_values": 16,
+      "naive_seconds": 1.7155195999657735,
+      "counts_seconds": 0.0028606000123545527,
+      "tiled_draws_seconds": 1.1791817999910563,
+      "counts_speedup": 599.7062128772535,
+      "tiled_scratch_budget_bytes": 8388608,
+      "full_matrix_scratch_bytes": 4096000000
+    }
+  ],
+  "continuous": {
+    "n": 100000,
+    "replicates": 256,
+    "draws_seconds": 0.07553529995493591,
+    "counts_seconds": 0.9096709999721497
+  },
+  "convolution": [
+    {
+      "grid_size": 513,
+      "dense_seconds": 3.704999107867479e-05,
+      "fft_seconds": 5.420000525191426e-05,
+      "speedup": 0.6835791049552757,
+      "dense_kernel_bytes": 2105352
+    },
+    {
+      "grid_size": 1025,
+      "dense_seconds": 0.0001440499909222126,
+      "fft_seconds": 7.660000119358301e-05,
+      "speedup": 1.880548155060343,
+      "dense_kernel_bytes": 8405000
+    },
+    {
+      "grid_size": 4097,
+      "dense_seconds": 0.0023136999807320535,
+      "fft_seconds": 0.00013124995166435838,
+      "speedup": 17.628196821350535,
+      "dense_kernel_bytes": 134283272
+    }
+  ],
+  "privacy_composition": [
+    {
+      "replicates": 32,
+      "bins_per_release": 201,
+      "recursive_direct_seconds": 0.0023053999757394195,
+      "fft_seconds": 0.00023310002870857716,
+      "speedup": 9.890174568024795
+    },
+    {
+      "replicates": 128,
+      "bins_per_release": 201,
+      "recursive_direct_seconds": 0.11052220000419766,
+      "fft_seconds": 0.0010831999825313687,
+      "speedup": 102.03305187091527
+    },
+    {
+      "replicates": 512,
+      "bins_per_release": 201,
+      "recursive_direct_seconds": 1.0774706000229344,
+      "fft_seconds": 0.005001100013032556,
+      "speedup": 215.44672116436644
+    }
+  ],
+  "notes": "Median wall time; kernel benchmark includes unique preprocessing. Memory numbers are analytical array sizes, not measured RSS. Benchmarks exclude Gaussian noise shared by both approaches."
+}

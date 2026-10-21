@@ -1,0 +1,37 @@
+{
+  "upstream_commit": "fd001561ed338d47143c94b995f4d47478ab9eb0",
+  "r_version": "4.6.0",
+  "cases": [
+    {
+      "case": "paper_clipped_normal",
+      "n": 10000,
+      "replicates": 2000,
+      "unique_values": 3897,
+      "r_boot_seconds": 1.15,
+      "python_seconds": 0.05219709989614785,
+      "speedup": 22.03187537790524,
+      "expected_mean": 0.49689021078474127,
+      "expected_variance": 1.8398920211306693e-05,
+      "r_estimate_mean": 0.496829319778209,
+      "python_estimate_mean": 0.49685572806082656,
+      "r_estimate_variance": 1.82172649233941e-05,
+      "python_estimate_variance": 1.8780170131679998e-05
+    },
+    {
+      "case": "categorical_16",
+      "n": 100000,
+      "replicates": 256,
+      "unique_values": 16,
+      "r_boot_seconds": 1.6,
+      "python_seconds": 0.00042719999328255653,
+      "speedup": 3745.318410952633,
+      "expected_mean": 0.5010213333333334,
+      "expected_variance": 9.449682354488891e-07,
+      "r_estimate_mean": 0.501005838541667,
+      "python_estimate_mean": 0.5009085703125,
+      "r_estimate_variance": 8.1419372372004e-07,
+      "python_estimate_variance": 9.663240882829493e-07
+    }
+  ],
+  "notes": "Shared input arrays; median of three in-process kernel timings. Authors' func_boot/func_param extracted unchanged from clamp_normal_mean.r. Excludes process startup, CSV I/O, Gaussian perturbation, deconvolution and parallel workers. Different random generators; distribution agreement, not seed parity."
+}

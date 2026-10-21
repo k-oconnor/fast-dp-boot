@@ -1,0 +1,172 @@
+{
+  "n": 10000,
+  "replicates": 2000,
+  "trials": 20,
+  "noise_multiplier": 1.125,
+  "r_median_seconds": 1.73,
+  "python_median_seconds": 0.06713549996493384,
+  "median_speedup": 25.768781060744494,
+  "rows": [
+    {
+      "trial": 1,
+      "r_total_seconds": 1.81,
+      "r_bootstrap_seconds": 1.14,
+      "python_total_seconds": 0.0756493000080809,
+      "python_bootstrap_seconds": 0.060241500032134354,
+      "converged": true
+    },
+    {
+      "trial": 2,
+      "r_total_seconds": 1.8,
+      "r_bootstrap_seconds": 1.17,
+      "python_total_seconds": 0.07491590001154691,
+      "python_bootstrap_seconds": 0.0618224999634549,
+      "converged": true
+    },
+    {
+      "trial": 3,
+      "r_total_seconds": 1.73,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.12407889997120947,
+      "python_bootstrap_seconds": 0.10905289999209344,
+      "converged": true
+    },
+    {
+      "trial": 4,
+      "r_total_seconds": 1.69,
+      "r_bootstrap_seconds": 1.1,
+      "python_total_seconds": 0.07555690000299364,
+      "python_bootstrap_seconds": 0.0631893000099808,
+      "converged": true
+    },
+    {
+      "trial": 5,
+      "r_total_seconds": 1.77,
+      "r_bootstrap_seconds": 1.13,
+      "python_total_seconds": 0.07531599991489202,
+      "python_bootstrap_seconds": 0.06255959998816252,
+      "converged": true
+    },
+    {
+      "trial": 6,
+      "r_total_seconds": 1.73,
+      "r_bootstrap_seconds": 1.14,
+      "python_total_seconds": 0.06829050008673221,
+      "python_bootstrap_seconds": 0.05653530010022223,
+      "converged": true
+    },
+    {
+      "trial": 7,
+      "r_total_seconds": 1.74,
+      "r_bootstrap_seconds": 1.13,
+      "python_total_seconds": 0.06576549995224923,
+      "python_bootstrap_seconds": 0.05372940003871918,
+      "converged": true
+    },
+    {
+      "trial": 8,
+      "r_total_seconds": 1.76,
+      "r_bootstrap_seconds": 1.14,
+      "python_total_seconds": 0.0637812000932172,
+      "python_bootstrap_seconds": 0.05239680001977831,
+      "converged": true
+    },
+    {
+      "trial": 9,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.06613890000153333,
+      "python_bootstrap_seconds": 0.054580099997110665,
+      "converged": true
+    },
+    {
+      "trial": 10,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.12,
+      "python_total_seconds": 0.06447470001876354,
+      "python_bootstrap_seconds": 0.0528966001002118,
+      "converged": true
+    },
+    {
+      "trial": 11,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.06719149998389184,
+      "python_bootstrap_seconds": 0.0552832999965176,
+      "converged": true
+    },
+    {
+      "trial": 12,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.06638199998997152,
+      "python_bootstrap_seconds": 0.054574100067839026,
+      "converged": true
+    },
+    {
+      "trial": 13,
+      "r_total_seconds": 1.7,
+      "r_bootstrap_seconds": 1.09,
+      "python_total_seconds": 0.06371509993914515,
+      "python_bootstrap_seconds": 0.05269289994612336,
+      "converged": true
+    },
+    {
+      "trial": 14,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.06539750006049871,
+      "python_bootstrap_seconds": 0.051845000009052455,
+      "converged": true
+    },
+    {
+      "trial": 15,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.0629470000276342,
+      "python_bootstrap_seconds": 0.0516550000756979,
+      "converged": true
+    },
+    {
+      "trial": 16,
+      "r_total_seconds": 1.73,
+      "r_bootstrap_seconds": 1.11,
+      "python_total_seconds": 0.0649277000920847,
+      "python_bootstrap_seconds": 0.0532308000838384,
+      "converged": true
+    },
+    {
+      "trial": 17,
+      "r_total_seconds": 1.72,
+      "r_bootstrap_seconds": 1.13,
+      "python_total_seconds": 0.06707949994597584,
+      "python_bootstrap_seconds": 0.05489819997455925,
+      "converged": true
+    },
+    {
+      "trial": 18,
+      "r_total_seconds": 1.94,
+      "r_bootstrap_seconds": 1.16,
+      "python_total_seconds": 0.08064989990089089,
+      "python_bootstrap_seconds": 0.06881829991471022,
+      "converged": true
+    },
+    {
+      "trial": 19,
+      "r_total_seconds": 1.87,
+      "r_bootstrap_seconds": 1.14,
+      "python_total_seconds": 0.07074359990656376,
+      "python_bootstrap_seconds": 0.05848729994613677,
+      "converged": true
+    },
+    {
+      "trial": 20,
+      "r_total_seconds": 1.88,
+      "r_bootstrap_seconds": 1.16,
+      "python_total_seconds": 0.07101680000778288,
+      "python_bootstrap_seconds": 0.05733969993889332,
+      "converged": true
+    }
+  ],
+  "notes": "Identical clipped-normal input data; independent R/NumPy randomness. Includes bootstrap, Gaussian perturbation, inference, pointwise uncertainty, and eager full mass covariance. Excludes CSV I/O, process startup, plots and experiment orchestration. One worker; medians across datasets. Estimator fidelity separately verified on identical private releases."
+}

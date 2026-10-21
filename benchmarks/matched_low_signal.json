@@ -1,0 +1,325 @@
+{
+  "trials": 20,
+  "n": 10000,
+  "replicates": 20,
+  "mu": 0.1,
+  "seed": 20261021,
+  "r_version": "4.6.0",
+  "deconvolveR_version": "1.2-2",
+  "r_likelihood_shape": [
+    39,
+    1000
+  ],
+  "rows": [
+    {
+      "trial": 1,
+      "r_seconds": 0.77,
+      "python_seconds": 0.009391400031745434,
+      "r_interval": [
+        0.485625794208099,
+        0.500036977257951
+      ],
+      "python_interval": [
+        0.48562579420809904,
+        0.5000369772579515
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.494126155605514e-10
+    },
+    {
+      "trial": 2,
+      "r_seconds": 0.67,
+      "python_seconds": 0.010349999996833503,
+      "r_interval": [
+        0.49858193284097,
+        0.517106064013987
+      ],
+      "python_interval": [
+        0.49858193284097047,
+        0.5171060640139872
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.3792413312028202e-15
+    },
+    {
+      "trial": 3,
+      "r_seconds": 0.73,
+      "python_seconds": 0.009743900038301945,
+      "r_interval": [
+        0.495673629591031,
+        0.512763984380114
+      ],
+      "python_interval": [
+        0.495673629591031,
+        0.5127639843801141
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.8041124150158794e-15
+    },
+    {
+      "trial": 4,
+      "r_seconds": 0.68,
+      "python_seconds": 0.00954160001128912,
+      "r_interval": [
+        0.493943005473948,
+        0.51773831088495
+      ],
+      "python_interval": [
+        0.4939430054739479,
+        0.51773831088495
+      ],
+      "python_converged": true,
+      "gradient_norm": 6.204747562965629e-09
+    },
+    {
+      "trial": 5,
+      "r_seconds": 0.67,
+      "python_seconds": 0.00911899993661791,
+      "r_interval": [
+        0.494968004256973,
+        0.513528986758944
+      ],
+      "python_interval": [
+        0.49496800425697296,
+        0.5135289867589444
+      ],
+      "python_converged": true,
+      "gradient_norm": 8.872212686750203e-11
+    },
+    {
+      "trial": 6,
+      "r_seconds": 0.7,
+      "python_seconds": 0.00893829995766282,
+      "r_interval": [
+        0.489976000258569,
+        0.509729189053501
+      ],
+      "python_interval": [
+        0.48997600025856897,
+        0.5097291890535008
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.2288284279016182e-10
+    },
+    {
+      "trial": 7,
+      "r_seconds": 0.7,
+      "python_seconds": 0.009374500019475818,
+      "r_interval": [
+        0.494974982117724,
+        0.513988993070754
+      ],
+      "python_interval": [
+        0.4949749821177244,
+        0.513988993070754
+      ],
+      "python_converged": true,
+      "gradient_norm": 4.644618023519342e-13
+    },
+    {
+      "trial": 8,
+      "r_seconds": 0.64,
+      "python_seconds": 0.008841700037010014,
+      "r_interval": [
+        0.491815254494628,
+        0.51343226482817
+      ],
+      "python_interval": [
+        0.49181525449462765,
+        0.5134322648281695
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.213361438574424e-12
+    },
+    {
+      "trial": 9,
+      "r_seconds": 0.68,
+      "python_seconds": 0.009092799969948828,
+      "r_interval": [
+        0.491497018078198,
+        0.509006848944947
+      ],
+      "python_interval": [
+        0.49149701807819807,
+        0.5090068489449466
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.0215493034815282e-09
+    },
+    {
+      "trial": 10,
+      "r_seconds": 0.640000000000001,
+      "python_seconds": 0.009371499996632338,
+      "r_interval": [
+        0.488703937401944,
+        0.520094372888406
+      ],
+      "python_interval": [
+        0.4887039374019435,
+        0.5200943728884055
+      ],
+      "python_converged": true,
+      "gradient_norm": 8.41687601560448e-10
+    },
+    {
+      "trial": 11,
+      "r_seconds": 0.64,
+      "python_seconds": 0.010758399963378906,
+      "r_interval": [
+        0.486477706551333,
+        0.511448260509897
+      ],
+      "python_interval": [
+        0.486477706551333,
+        0.5114482605098976
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.4858936303596693e-10
+    },
+    {
+      "trial": 12,
+      "r_seconds": 0.619999999999999,
+      "python_seconds": 0.00927319994661957,
+      "r_interval": [
+        0.488296072921391,
+        0.517886039368545
+      ],
+      "python_interval": [
+        0.4882960729213906,
+        0.5178860393685453
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.623688155096616e-10
+    },
+    {
+      "trial": 13,
+      "r_seconds": 0.600000000000001,
+      "python_seconds": 0.008969399961642921,
+      "r_interval": [
+        0.493494581517712,
+        0.512534329557476
+      ],
+      "python_interval": [
+        0.49349458151771136,
+        0.5125343295574757
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.432129580538401e-12
+    },
+    {
+      "trial": 14,
+      "r_seconds": 0.619999999999999,
+      "python_seconds": 0.008629199932329357,
+      "r_interval": [
+        0.490544588278665,
+        0.504642959651461
+      ],
+      "python_interval": [
+        0.490544588278665,
+        0.5046429596514609
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.705672907943324e-10
+    },
+    {
+      "trial": 15,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.009305299958214164,
+      "r_interval": [
+        0.496108265355849,
+        0.511789436108786
+      ],
+      "python_interval": [
+        0.4961082653558491,
+        0.5117894361087856
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.7000754970464271e-10
+    },
+    {
+      "trial": 16,
+      "r_seconds": 0.630000000000001,
+      "python_seconds": 0.009327600011602044,
+      "r_interval": [
+        0.485311034692258,
+        0.506467877379682
+      ],
+      "python_interval": [
+        0.48531103469225767,
+        0.5064678773796824
+      ],
+      "python_converged": true,
+      "gradient_norm": 2.5679319781701793e-12
+    },
+    {
+      "trial": 17,
+      "r_seconds": 0.6,
+      "python_seconds": 0.009782699984498322,
+      "r_interval": [
+        0.493371880204154,
+        0.516968750597714
+      ],
+      "python_interval": [
+        0.49337188020415407,
+        0.516968750597714
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.9290125052862095e-15
+    },
+    {
+      "trial": 18,
+      "r_seconds": 0.65,
+      "python_seconds": 0.00903039996046573,
+      "r_interval": [
+        0.487217428765767,
+        0.5122706231068
+      ],
+      "python_interval": [
+        0.4872174287657671,
+        0.5122706231068005
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.5146695842016555e-09
+    },
+    {
+      "trial": 19,
+      "r_seconds": 0.59,
+      "python_seconds": 0.008611400029622018,
+      "r_interval": [
+        0.494230176230258,
+        0.514344818245723
+      ],
+      "python_interval": [
+        0.4942301762302575,
+        0.5143448182457232
+      ],
+      "python_converged": true,
+      "gradient_norm": 1.6553425297161084e-13
+    },
+    {
+      "trial": 20,
+      "r_seconds": 0.609999999999999,
+      "python_seconds": 0.009015100076794624,
+      "r_interval": [
+        0.486791086874127,
+        0.509305838675413
+      ],
+      "python_interval": [
+        0.4867910868741269,
+        0.5093058386754127
+      ],
+      "python_converged": true,
+      "gradient_norm": 3.35498226422537e-11
+    }
+  ],
+  "summary": {
+    "r_median_seconds": 0.6400000000000006,
+    "python_median_seconds": 0.009289249952416867,
+    "max_interval_difference": 6.661338147750939e-16,
+    "r_coverage": 1.0,
+    "python_coverage": 1.0,
+    "converged": 20,
+    "median_speedup": 68.8968434780341
+  },
+  "notes": "Identical private releases, model, spline basis, bins, penalty, and grid brackets. Both compute pointwise covariance-derived SEs and bias; Python retains low-rank covariance rather than eagerly materializing the full mass covariance matrix. Timings include fit and statistics; exclude process startup and CSV I/O. Per-fit single timings across multiple inputs, not a production throughput test."
+}
